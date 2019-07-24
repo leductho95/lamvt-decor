@@ -1,0 +1,104 @@
+mixin header()
+  header.site-header
+    .topbar
+      .container
+        .row
+          .col-sm-6
+            .topbar-left
+              p.mb-0.text-capitalize
+                i.fa.fa-map-signs.mr-2
+                span TDP Phú thứ, Nam từ Liêm, Hà nội
+          .col-sm-6
+            .topbar-right.text-left.text-md-right
+              p.mb-0
+                i.fa.fa-mobile-alt.mr-2
+                span 0399815232
+
+    .topbar-bottom.py-3.py-md-5.d-none.d-lg-block
+      .container
+        .row.justify-content-between.align-items-center
+          .col-md-3
+            form.form-inline.my-2.my-lg-0.site-search.d-flex
+              input.form-control.w-100.bg-transparent(type='search', placeholder='Nhập từ khóa tìm kiếm...', aria-label='Search')
+              button.btn(type='submit')
+                i.fa.fa-search
+
+          .col-md-4
+            a(href="#" title="").site-cart.float-right
+              i.fa.fa-opencart
+              .site-cart-right.ml-3.d-none.d-lg-flex.align-items-center
+                h3 giỏ hàng
+                span 0 mục
+
+    .site-menu.d-none.d-lg-block
+      .container
+        .row
+          .col-md-6.px-0
+            ul.list-unstyled.list-inline.text-left.mb-0.main-menu-left
+              li.main-menu-item.list-inline-item
+                a.main-menu-link(href='index.html') trang chủ
+              li.main-menu-item.list-inline-item
+                a.main-menu-link(href='category.html') sản phẩm
+              li.main-menu-item.list-inline-item
+                a.main-menu-link(href='#') liên hệ
+
+          a(href="index.html").site-logo
+            img(src="images/logo.jpg", alt="site logo", class="img-fluid")
+
+          .col-md-6.px-0
+            ul.list-unstyled.list-inline.text-right.mb-0.main-menu-right
+              li.main-menu-item.list-inline-item
+                a.main-menu-link(href='#') giới thiệu
+              li.main-menu-item.list-inline-item
+                a.main-menu-link(href='archive.html') tin tức
+              li.main-menu-item.list-inline-item
+                a.main-menu-link(href='#') thư viện
+
+    .site-menu-mobile.py-2.d-block.d-lg-none
+      .container
+        .d-flex.justify-content-between.align-items-center
+          button.menu-toggle.js-menu-toggle.d-block.d-lg-none(aria-expanded='false')
+            i.fa.fa-bars
+          .site-logo-mobile
+            a.d-block(href='index.html')
+              img.img-fluid.d-block.mx-auto(src='images/logo-footer.png', alt='site-logo')
+          .site-menu-mobile-right
+            // Button trigger modal 
+            button.btn.btn-primary.mr-2(type='button', data-toggle='modal', data-target='#searchModal')
+              i.fa.fa-search
+            a(href="#" title="").site-cart.float-right
+              i.fa.fa-opencart
+              .site-cart-right.ml-3.d-none.d-lg-flex.align-items-center
+                h3 giỏ hàng
+                span 0 mục
+
+    .side-nav.d-block.d-lg-none.js-canvas-menu
+      .side-nav-top.py-2.pl-3.border-bottom.d-flex.align-items-center.justify-content-between
+        h4.mb-0 Menu
+        button.close-menu.js-close-menu(type='button', aria-label='Close')
+          i.fas.fa-times
+      ul.site-mobile-menu.navbar-nav.p-3.text-left
+        li.nav-item.active
+          a.nav-link(href='index.html')
+            | trang chủ
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='category.html') sản phẩm
+          a.fas.fa-angle-right.js-change-icon.ic-caret(data-toggle='collapse', href='#collapseMenu', role='button', aria-expanded='false', aria-controls='collapseMenu')
+        li.collapse#collapseMenu
+          .sub-menu-mobile
+            a(href='category.html' title="" class="py-1") Lorem Ipsum is simply dummy text
+            a(href='category.html' title="" class="py-1") Lorem Ipsum is simply dummy text
+            a(href='category.html' title="" class="py-1") Lorem Ipsum is simply dummy text
+            a(href='category.html' title="" class="py-1") Lorem Ipsum is simply dummy text
+            a(href='category.html' title="" class="py-1") Lorem Ipsum is simply dummy text
+            a(href='category.html' title="" class="py-1") Lorem Ipsum is simply dummy text
+            a(href='category.html' title="" class="py-1") Lorem Ipsum is simply dummy text
+        li.nav-item
+          a.nav-link(href='#') liên hệ
+        li.nav-item
+          a.nav-link(href='#') giới thiệu
+        li.nav-item
+          a.nav-link(href='archive.html') tin tức
+        li.nav-item
+          a.nav-link(href='#') thư viện

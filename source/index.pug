@@ -1,0 +1,413 @@
+
+extends layouts/_layout
+
+block head
+  +head("MyChair - Home page")
+
+block body
+  main.main-body
+    #site-carousel.site-carousel.carousel.slide(data-ride='carousel')
+      .carousel-inner
+        .carousel-item.active
+          img.d-block.w-100(src='images/slider.jpg', alt='banner image')
+        .carousel-item
+          img.d-block.w-100(src='images/slider2.jpg', alt='banner image')
+        .carousel-item
+          img.d-block.w-100(src='images/slider3.jpg', alt='banner image')
+        .carousel-item
+          img.d-block.w-100(src='images/slider4.jpg', alt='banner image')
+        a.carousel-control-prev(href='#site-carousel' role='button' data-slide='prev')
+          span.carousel-control-prev-icon(aria-hidden='true')
+          span.sr-only Previous
+        a.carousel-control-next(href='#site-carousel' role='button' data-slide='next')
+          span.carousel-control-next-icon(aria-hidden='true')
+          span.sr-only Next
+
+    .feature-product.my-5
+      .container
+        h2.site-heading.text-left.mb-3
+          | sản phẩm 
+          span nổi bật
+        p.text-justify Đây là các sản phẩm tốt nhất của chúng tôi, hãy lựa chọn sản phẩm bạn yêu thích và mua sắm ngay
+        a.btn-view(href="#" title) xem tất cả
+
+        .mt-4.mt-md-5
+
+        .row
+          .col-md-4
+            .feature-product-wrap
+              img.img-fluid(src="images/feature-product1.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+            .feature-product-wrap
+              img.img-fluid(src="images/feature-product2.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+          .col-md-8
+            .feature-product-wrap
+              img.img-fluid(src="images/feature-product3.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+            .row
+              .col-md-6
+                .feature-product-wrap
+                  img.img-fluid(src="images/feature-product4.jpg", alt="")
+                  a(href='#' title="").feature-product-text đồ gỗ tiện ích
+                  .feature-product-overlay
+
+              .col-md-6
+                .feature-product-wrap
+                  img.img-fluid(src="images/feature-product5.jpg", alt="")
+                  a(href='#' title="").feature-product-text đồ gỗ tiện ích
+                  .feature-product-overlay
+
+    .feature-product.home-cate.mb-4
+      .container
+        .row
+          .col-12.d-block.d-lg-none
+            .home-cate-content
+              h2.site-heading
+                | danh mục  
+                span sản phẩm
+              .mx-auto.text-center
+                a.btn-view(href="#" title) xem tất cả
+
+            .feature-product-wrap
+              img.img-fluid.mx-auto.d-block(src="images/cate3.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+
+          .col-md-6.col-lg-4
+            .feature-product-wrap
+              img.img-fluid(src="images/cate1.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+
+            .feature-product-wrap
+              img.img-fluid(src="images/cate2.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+
+          .col-md-6.col-lg-4.d-none.d-lg-block
+            .home-cate-content
+              h2.site-heading
+                | danh mục  
+                span sản phẩm
+              .mx-auto.text-center
+                a.btn-view(href="#" title) xem tất cả
+
+            .feature-product-wrap
+              img.img-fluid(src="images/cate3.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+
+          .col-md-6.col-lg-4
+            .feature-product-wrap
+              img.img-fluid(src="images/cate4.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+
+            .feature-product-wrap
+              img.img-fluid(src="images/cate5.jpg", alt="")
+              a(href='#' title="").feature-product-text đồ gỗ tiện ích
+              .feature-product-overlay
+
+    .news-product.mb-4
+      .container
+        h2.site-heading
+          | sản phẩm 
+          span mới nhất
+        .row
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product1.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product2.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product3.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product4.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product5.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product6.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product7.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product8.jpg',
+            })
+
+    .product-widget.mb-4
+      .container
+        h2.site-heading
+          span ghế 
+          | văn phòng
+        .row
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product9.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product10.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product11.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product12.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product13.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product14.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product15.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product16.jpg',
+            })
+
+
+    .product-widget.mb-4
+      .container
+        h2.site-heading
+          span bàn làm việc 
+          | văn phòng
+        .row
+          .col-md-6.col-lg-4
+            +product({
+              imgSrc: 'images/table1.jpg',
+            })
+
+          .col-md-6.col-lg-4
+            +product({
+              imgSrc: 'images/table2.jpg',
+            })
+
+          .col-md-6.col-lg-4
+            +product({
+              imgSrc: 'images/table3.jpg',
+            })
+          .col-md-6.col-lg-4
+            +product({
+              imgSrc: 'images/table4.jpg',
+            })
+          .col-md-6.col-lg-4
+            +product({
+              imgSrc: 'images/table5.jpg',
+            })
+          .col-md-6.col-lg-4
+            +product({
+              imgSrc: 'images/table6.jpg',
+            })
+
+    .product-widget.mb-4
+      .container
+        h2.site-heading
+          span tủ tài liệu 
+          | văn phòng
+        .row
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product17.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product18.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product19.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product20.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product21.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product22.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product23.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product24.jpg',
+            })
+
+
+    .product-widget.mb-4
+      .container
+        h2.site-heading
+          span phụ kiện  
+          | văn phòng
+        .row
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product25.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product26.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product27.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product28.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product29.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product30.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product31.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product32.jpg',
+            })
+
+    .product-widget.mb-4
+      .container
+        h2.site-heading
+          span đồ trang trí  
+          | văn phòng
+        .row
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product33.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product34.jpg',
+            })
+
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product35.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product36.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product37.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product38.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product39.jpg',
+            })
+          .col-md-6.col-lg-3
+            +product({
+              imgSrc: 'images/product40.jpg',
+            })
+
+    .blog-wrap.mb-4
+      .container
+        h2.site-heading
+          span tin tức  
+          | mới nhất
+
+        .row
+          .col-lg-4
+            .blog
+              a(href="single.html").d-block.blog-img
+                img.w-100(src="images/blog1.jpg", alt="blog img")
+              .blog-info
+                h3 
+                  a(href="single.html") Lorem Ipsum là đoạn văn bản giả phục vụ cho in ấn
+                p Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn...
+                a(href="single.html").btn-view Xem chi tiết
+              .blog-date 15/6
+
+          .col-lg-4
+            .blog
+              a(href="single.html").d-block.blog-img
+                img.w-100(src="images/blog2.jpg", alt="blog img")
+              .blog-info
+                h3 
+                  a(href="single.html") Lorem Ipsum là đoạn văn bản giả phục vụ cho in ấn
+                p Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn...
+                a(href="single.html").btn-view Xem chi tiết
+              .blog-date 15/6
+
+          .col-lg-4
+            .blog
+              a(href="single.html").d-block.blog-img
+                img.w-100(src="images/blog3.jpg", alt="blog img")
+              .blog-info
+                h3 
+                  a(href="single.html") Lorem Ipsum là đoạn văn bản giả phục vụ cho in ấn
+                p Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn...
+                a(href="single.html").btn-view Xem chi tiết
+              .blog-date 15/6
+
+    .promo
+      .container
+        .row
+          .col-lg-4.col-md-6
+            .promo-item
+              .fa.fa-undo.promo-icon
+              h3 Chính sách vận chuyển
+              p Vận chuyển miễn phí dưới 5km
+
+          .col-lg-4.col-md-6
+            .promo-item
+              .fa.fa-award.promo-icon
+              h3 sản phẩm chất lượng cao
+              p 100% sản phẩm có đầy đủ nguồn gốc, xuất xứ. 
+          .col-lg-4.col-md-6
+            .promo-item
+              .fa.fa-phone.promo-icon
+              h3 tư vấn nhiệt tình
+              p Tư vấn nhiệt tình khách hàng 24/7

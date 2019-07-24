@@ -1,0 +1,63 @@
+
+extends layouts/_layout
+
+block head
+  +head("MyChair - Archive")
+
+block body
+
+  main.main-body
+    nav(aria-label='breadcrumb').site-breadcrumb
+      .container.px-0
+        ol.breadcrumb.bg-transparent.mb-0.justify-content-center
+          li.breadcrumb-item
+            a(href='index.html')
+              i.fa.fa-home.mr-2
+              | Trang chủ
+          li.breadcrumb-item.active(aria-current='page') Tin tức
+
+    .main-archive.my-4.my-md-5
+      .container-fluid.px-xl-5
+        .row
+          .col-lg-9
+            .main-archive-left.row
+              each item in [1,2,3]
+                .col-lg-4
+                  .blog
+                    a(href="single.html").d-block.blog-img
+                      img.w-100(src="images/blog" + item + ".jpg", alt="blog img")
+                    .blog-info
+                      h3 
+                        a(href="single.html") Lorem Ipsum là đoạn văn bản giả phục vụ cho in ấn
+                      p Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn...
+                      a(href="single.html").btn-view Xem chi tiết
+                    .blog-date 15/6
+
+              each item in [1,2,3]
+                .col-lg-4
+                  .blog
+                    a(href="#single.html").d-block.blog-img
+                      img.w-100(src="images/blog" + item + ".jpg", alt="blog img")
+                    .blog-info
+                      h3 
+                        a(href="single.html") Lorem Ipsum là đoạn văn bản giả phục vụ cho in ấn
+                      p Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn...
+                      a(href="single.html").btn-view Xem chi tiết
+                    .blog-date 15/6
+
+              each item in [1,2,3]
+                .col-lg-4
+                  .blog
+                    a(href="single.html").d-block.blog-img
+                      img.w-100(src="images/blog" + item + ".jpg", alt="blog img")
+                    .blog-info
+                      h3 
+                        a(href="single.html") Lorem Ipsum là đoạn văn bản giả phục vụ cho in ấn
+                      p Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn...
+                      a(href="single.html").btn-view Xem chi tiết
+                    .blog-date 15/6
+
+            +paginations()
+
+          .col-lg-3
+            +sidebar()

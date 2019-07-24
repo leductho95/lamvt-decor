@@ -1,0 +1,77 @@
+mixin footer()
+  footer.site-footer.py-4.py-md-5
+    .container
+      .row.justify-content-between
+        .col-lg-4
+          .site-logo-footer.mb-3
+            a.d-block(href='index.html')
+              img.img-fluid.d-block(src='images/logo-footer.png', alt='site-logo')
+          p.text-justify.mt-3.mb-lg-0 Chúng tôi cung cấp các sản phẩm nội thất văn phòng đa dạng về mẫu mã và chất liệu cao cấp, thiết kế hiện đại với nhiều mức giá phù hợp với tất cả yêu cầu của bạn.
+
+        .col-lg-4.mb-4.mb-lg-0
+          h4.site-footer-header.text-uppercase thông tin liên hệ
+          p.font-weight-bold.text-white Nội thất văn phòng MYCHAIR
+          p Địa chỉ: Số 25, TDP Phú Thứ, Nam Từ Liêm, Hà Nội
+          p Phone: 
+            a(href='tel:0399815232') 039 981 5232
+          p Email: Lamvt20031979@gmail.com
+          p Website: Lamvt.vn
+
+        .col-lg-4
+          a.site-map.d-inline-block(href="https://www.google.com/maps/place/l%C3%A0ng+Ph%C3%BA+Th%E1%BB%A9,+T%C3%A2y+M%E1%BB%97,+T%E1%BB%AB+Li%C3%AAm,+Hanoi,+Vietnam/@21.0029928,105.7503176,18z/data=!3m1!4b1!4m5!3m4!1s0x3134536f249f6a15:0x816f036dd35ef5bf!8m2!3d21.0030191!4d105.7519885" title="" target="_blank")
+            img.img-fluid(src="images/map.jpg", alt="site map")
+
+  .copyright
+    .container
+      p.text-center.mb-0
+        | Copyright &copy; 2019 by 
+        a.text-uppercase(href="#" title="") MyChair.
+        |  All rights reserved.
+        |  CODE and SEO by 
+        a(href="#" title="") Lamvt.vn
+
+  .overlay-mobile
+  a#go-top.go-top.js-go-top(href='index.html', title='back to top')
+    i.fas.fa-angle-up
+
+  #contact.contact.js-contact
+    .contact-wrap
+      a(href="#" title="").fa.fa-phone
+  .contact-content.js-contact-content
+    ul.list-group.list-group-flush
+      li.list-group-item.p-2
+        a(href="fb.com" title="").d-flex.align-items-center
+          span.fab.fa-facebook-messenger
+          |  Messenger
+      li.list-group-item.p-2
+        a(href="mailto:lamvt20031979@gmail.com" title="").d-flex.align-items-center
+          span.fa.fa-envelope
+          | Email us
+      li.list-group-item.p-2
+        a(href="zalo.com" title="").d-flex.align-items-center
+          img.mr-2.pr-1(src="images/zalo-icon.png", alt="")
+          | Zalo
+      li.list-group-item.p-2
+        a(href="tel:0399815232" title="").d-flex.align-items-center
+          span.fa.fa-phone
+          | Call us
+
+  .contact.contact-close.js-contact-close
+    .contact-wrap.bg-transparent
+      a(href="#" title="").fa.fa-close
+
+  // Modal 
+  .modal.fade#searchModal.mt-5(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h5.modal-title#exampleModalLabel Tìm kiếm
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          form.form-inline.my-2.my-lg-0.site-search.d-flex.justify-content-center
+            input.form-control.w-100(type='search', placeholder='Nhập từ khóa tìm kiếm...', aria-label='Search')
+            button.btn(type='submit')
+              i.fa.fa-search
+
+  script(src='js/main.js')
