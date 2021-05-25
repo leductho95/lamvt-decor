@@ -20,7 +20,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "browserslist": "^4.5.2",
+    "browserslist": "^4.16.5",
     "caniuse-lite": "^1.0.30000954",
     "gulp-cache": "^1.1.1",
     "gulp-cached": "^1.1.1",
